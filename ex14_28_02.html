@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrara Taxi</title>
 </head>
 <body>
     nome do passageiro: <input id="ipt_nomePassageiro">
@@ -30,6 +30,32 @@
         var distancia = Number(ipt_distancia.value);
         var bandeira = Number(ipt_bandeira.value);
         var horaCorrida = Number(ipt_horaCorrida.value);
+        var valorNominal = distancia*1.25;
+        var total = valorNominal
+        
+        div_calcularCorrida.innerHTML = `olá ${nome} sua corrida será na bandeira ${bandeira}, percorrerá ${distancia}km e o total da corrida será de`
+        
+        
+        if(horaCorrida <= 12){
+            if(horaCorrida >=7){
+                bandeira = 3;
+               total= valorNominal + (valorNominal * 45)/100;
+
+               
+            }
+            div_calcularCorrida.innerHTML += `${total}`  
+        }
+        if(horaCorrida <= 12){
+            if(horaCorrida >=7){
+                bandeira = 3;
+               total= valorNominal + (valorNominal * 45)/100;
+
+               
+            }
+            div_calcularCorrida.innerHTML += `${total}`  
+        }
+
+
         
     }
 </script>
