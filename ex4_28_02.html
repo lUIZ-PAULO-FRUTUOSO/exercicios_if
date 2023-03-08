@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o valor da pizza? <input id="ipt_val_pizza">
+    <br>
+    quantos amigos para o rateio? <input id="ipt_qtd_amigos">
+    <br>
+    <button onclick="rateio()">
+        Rola a pizza?
+    </button>
+    <div id="div_rateio">
+
+    </div>
+</body>
+</html>
+
+<script>
+    function rateio(){
+        var valPizza = Number(ipt_val_pizza.value);
+        var qtdAmigos = Number(ipt_qtd_amigos.value);
+        var valRateio = valPizza/qtdAmigos;
+        div_rateio.innerHTML = `Cada amigo vai pagar R$${valRateio} pela pizza<br>`
+        if(valRateio > 20){
+            div_rateio.innerHTML += ` Deu ruim! Pizza muito cara!`
+        }
+    }
+</script>

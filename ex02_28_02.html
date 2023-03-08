@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    quantas latas de refrigerante voce toma por dia? <input id="ipt_qtd_latas">
+    <br>
+    <button onclick="refrisAno()">
+        Quantos refris
+    </button>
+    <div id="div_refris_ano">
+
+    </div>
+</body>
+</html>
+<script>
+    function refrisAno(){
+        var qtdLatas = Number(ipt_qtd_latas.value);
+        var refrisAno = qtdLatas * 365;
+
+        div_refris_ano.innerHTML = `Você consome ${refrisAno} por ano`
+            if (refrisAno >=500){
+                div_refris_ano.innerHTML += `
+                Cuidado com a diabetes! `
+                
+            }
+    }
+</script>

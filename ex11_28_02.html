@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    quantos filhos: <input id="ipt_qtd_filhos">
+    <br>
+    <button onclick="analisarFamilia()">
+        analisar Familia
+    </button>
+    <div id="div_analisar_familia">
+
+    </div>
+</body>
+</html>
+<script>
+    function analisarFamilia(){
+
+        var qtdFilhos = Number(ipt_qtd_filhos.value);
+        if(qtdFilhos >= 1){
+            div_analisar_familia.innerHTML = `Não tem TV`
+            if(qtdFilhos >=2){ 
+                div_analisar_familia.innerHTML += `<br> Não tem internet`
+                if(qtdFilhos>=3){
+                    div_analisar_familia.innerHTML += `<br>Não tem video game`
+                    if(qtdFilhos>=4){
+                        div_analisar_familia.innerHTML += `<br>Não tem Netflix`
+                    }
+                }
+            }
+        }
+    }
+</script>

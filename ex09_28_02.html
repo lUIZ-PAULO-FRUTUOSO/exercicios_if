@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    última siticom assistida: <input id="ipt_siticom">
+    <br>
+    quantos episódios já foram assistidos: <input id="ipt_episodios">
+    <br>
+    <button onclick="verificarNivel()">
+        verificar nivel
+    </button>
+    <div id="div_verificar_nivel">
+
+    </div>
+</body>
+</html>
+<script>
+    function verificarNivel(){
+        var siticom =ipt_siticom.value;
+        var qtdEpisodios = Number(ipt_episodios.value);
+        var horasAssistidas = (qtdEpisodios*22)/60;
+        div_verificar_nivel.innerHTML = `Vejo que você gosta da série ${siticom} <br>`
+        if (horasAssistidas >30){
+            div_verificar_nivel.innerHTML += `"Ual, você realmente gosta dessa série!"`
+        }
+    }
+</script>

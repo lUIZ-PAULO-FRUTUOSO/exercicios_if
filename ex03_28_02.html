@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    nota 1: <input id="ipt_n1">
+    <br>
+    nota 2: <input id="ipt_n2">
+    <br>
+    nota 3: <input id="ipt_n3">
+    <br>
+    <button onclick="desempenho()">
+        Analisar desempenho
+    </button>
+    <div id="div_desempenho">
+
+    </div>
+</body>
+</html>
+<script>
+    function desempenho(){
+        var nota1 = Number(ipt_n1.value);
+        var nota2 = Number(ipt_n2.value);
+        var nota3 = Number(ipt_n3.value);
+        var media = (nota1+nota2+nota3)/3;
+        div_desempenho.innerHTML = `Sua média foi de ${media}`
+        if(media>9.4){
+            div_desempenho.innerHTML += ` <br> Parabens, você é fora de Série!  `
+
+        }
+
+    }
+</script>

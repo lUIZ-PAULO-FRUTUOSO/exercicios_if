@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    renda familiar: <input id="ipt_renda">
+    <br>
+    valor da prestação: <input id="ipt_prestacao">
+    <button onclick="financiamento()">
+        verificar financiamento
+    </button>
+    <div id="div_financiamento">
+
+    </div>
+</body>
+</html>
+<script>
+    function financiamento(){
+        var renda = Number(ipt_renda.value);
+        var prestação = Number(ipt_prestacao.value);
+        var porcentCorrespondente = (prestação/renda)*100
+        div_financiamento.innerHTML = `A prestação corresponde a ${porcentCorrespondente}% da renda familiar<br>`
+        if(porcentCorrespondente >30){
+            div_financiamento.innerHTML += `<font color="red"><strong>Será necessario completar a renda familiar</strong></font>`
+        }
+    }
+</script>

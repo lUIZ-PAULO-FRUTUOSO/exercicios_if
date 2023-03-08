@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    quantidade de kWh consumida em um mês (30 dias) <input id="ipt_consumo">
+    <br>
+    <button onclick="contaLuz()">
+        conta de luz
+    </button>
+    
+
+</body>
+</html>
+<script>
+    function contaLuz(){
+        var consumo = Number(ipt_consumo.value);
+        var valConta = consumo * 0.85;
+        var desconto =(valConta*10)/100;
+        
+        
+        if(consumo >= 100){
+            alert("deve ser pago " +valConta);
+        };
+
+        if (consumo <100){
+            var valConta = valConta - desconto;
+
+           alert("deve ser pago " +valConta);
+
+       }
+    }
+</script>

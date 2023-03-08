@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    nome do passageiro: <input id="ipt_nomePassageiro">
+    <br>
+    distância: <input id="ipt_distancia">
+    <br>
+    bandeira <input id="ipt_bandeira" type="number" min="1" max="3" >
+    <br>
+    horario da corrida: <input id="ipt_horaCorrida" type="number" min="0" max="23">
+    <br>
+    <button onclick="calcularCorrida()">
+        calcular corrida
+    </button>
+    <div id="div_calcularCorrida">
+
+    </div>
+
+</body>
+</html>
+<script>
+    function calcularCorrida(){
+        var nome = ipt_nomePassageiro.value;
+        var distancia = Number(ipt_distancia.value);
+        var bandeira = Number(ipt_bandeira.value);
+        var horaCorrida = Number(ipt_horaCorrida.value);
+        
+    }
+</script>
